@@ -84,12 +84,15 @@ That's it! No build process, no dependencies to install.
 
 ```
 logocraft/
-├── index.html          # Main application
-├── index.css           # Styling and responsive design
-├── logocraft.js        # Core functionality
-├── vercel.json         # Deployment configuration
-├── package.json        # Project metadata
-└── favicon/            # Sample favicon assets generated via LogoCraft
+├── public/
+│ ├── index.html # Main application
+│ ├── index.css # Styling and responsive design
+│ ├── logocraft.js # Core functionality
+│ └── favicon/ # Sample favicon assets generated via LogoCraft
+├── vercel.json # Deployment configuration
+├── package.json # Project metadata
+├── README.md # Project documentation
+├── LICENSE # Project license
 ```
 
 ## 🤝 Contributing
