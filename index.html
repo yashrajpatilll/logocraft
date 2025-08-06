@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogoCraft - Multi-Platform Asset Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon/android-chrome-192x192.png">
+
+    <!-- Meta tags for better SEO -->
+    <meta name="description"
+        content="Professional logo asset generator for iOS, Android, and Web. Create perfect app icons and favicons instantly - free online tool.">
+    <meta name="keywords"
+        content="logo generator, app icon maker, favicon generator, iOS icon, Android icon, free design tool">
+    <meta name="author" content="LogoCraft">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="LogoCraft - Multi-Platform Logo Generator">
+    <meta property="og:description"
+        content="Create professional logo assets for all platforms in seconds. Free online tool for designers and developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://logocraft.yashrajpatil.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LogoCraft - Multi-Platform Logo Generator">
+    <meta name="twitter:description"
+        content="Create professional logo assets for iOS, Android, and Web platforms instantly.">
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./logocraft.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <div class="logo-title">
+                    <span class="logo-icon">🎨</span>
+                    <h1>LogoCraft</h1>
+                </div>
+                <p>Professional multi-platform logo asset generator. Create perfect icons for iOS, Android, and Web in
+                    seconds for FREE.</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <div class="upload-text">Drop your logo here or click to browse</div>
+                        <div class="upload-hint">Supports PNG, JPG, SVG • Max file size: 10MB</div>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" class="file-input" accept="image/*">
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div class="loading-text">Processing your logo...</div>
+            </div>
+
+            <div class="controls-section" id="controlsSection">
+                <div class="controls-header">
+                    <div class="platform-tabs">
+                        <div class="platform-tab active" data-platform="all">
+                            <span>✨</span> All
+                        </div>
+                        <div class="platform-tab" data-platform="ios">
+                            <span>📱</span> iOS
+                        </div>
+                        <div class="platform-tab" data-platform="android">
+                            <span>🤖</span> Android
+                        </div>
+                        <div class="platform-tab" data-platform="web">
+                            <span>🌐</span> Web
+                        </div>
+                        <div class="platform-tab" data-platform="favicon">
+                            <span>🎯</span> Favicons
+                        </div>
+                        <div class="platform-tab" data-platform="universal">
+                            <span>🚀</span> Universal
+                        </div>
+                    </div>
+
+                    <div class="selection-actions">
+                        <button class="action-btn" id="toggleSelectBtn" onclick="toggleSelectAll()">
+                            ✅ Select All
+                        </button>
+                        <button class="action-btn download" onclick="downloadSelected()">
+                            📦 Download Selected
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-bar" id="statsBar">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="selectedCount">0</div>
+                        <div class="stat-label">Selected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="visibleCount">0</div>
+                        <div class="stat-label">Visible</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="totalCount">11</div>
+                        <div class="stat-label">Total</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">Free</div>
+                        <div class="stat-label">Always</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="preview-section" id="previewSection">
+                <div class="sizes-grid" id="sizesGrid"></div>
+            </div>
+        </div>
+
+        <div class="brand-footer">
+            <p>Built with ❤️ for designers and developers • Generate professional logo assets instantly</p>
+            <a href="https://github.com/yashrajpatilll/logocraft" target="_blank">GitHub</a>
+            <span>  |  </span>
+            <a href="https://twitter.com/yashrajpatil" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</body>
+
+</html>

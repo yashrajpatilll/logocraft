@@ -1,0 +1,32 @@
+{
+    "name": "logocraft",
+    "version": "1.0.0",
+    "description": "Professional multi-platform logo asset generator. Create perfect icons for iOS, Android, and Web in seconds.",
+    "main": "index.html",
+    "scripts": {
+      "dev": "python -m http.server 3000",
+      "start": "python -m http.server 8000",
+      "build": "echo 'Static site ready for deployment'"
+    },
+    "keywords": [
+      "logo", 
+      "generator", 
+      "app-icon", 
+      "favicon", 
+      "ios", 
+      "android", 
+      "web", 
+      "design-tools",
+      "asset-generator"
+    ],
+    "author": "Yashraj Patil",
+    "license": "MIT",
+    "homepage": "https://logocraft.yashrajpatil.com",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/yashrajpatilll/logocraft.git"
+    },
+    "bugs": {
+      "url": "https://github.com/yashrajpatilll/logocraft/issues"
+    }
+  }
